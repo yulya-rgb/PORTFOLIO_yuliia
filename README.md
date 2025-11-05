@@ -36,7 +36,7 @@ portfolio/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/portfolio.git
+https://yulya-rgb.github.io/PORTFOLIO_yuliia/
 
 ```
 2.Open index.html in your web browser.
