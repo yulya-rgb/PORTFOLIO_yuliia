@@ -383,7 +383,7 @@ header nav ul li.button a:hover {
 }
 
 .footer-content {
-  display: flex;
+  display: flex; 
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
@@ -391,6 +391,8 @@ header nav ul li.button a:hover {
 }
 
 .social-links a {
+ 
+  display: inline-block; 
   font-size: 24px;
   margin-left: 20px;
   transition: color 300ms ease;
@@ -399,6 +401,31 @@ header nav ul li.button a:hover {
 
 .social-links a:hover {
   color: var(--primary-color);
+}
+
+/* ---------------- SCROLL TO TOP (New Fixed Element) ---------------- */
+
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  color: var(--bg-dark);
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 700;
+  opacity: 0.8;
+  transition: opacity 300ms ease;
+  z-index: 1000;
+  display: none; /* Приховано за замовчуванням (зазвичай керується JS) */
+}
+
+#scroll-to-top:hover {
+  opacity: 1;
 }
 
 /* ---------------- ADAPTIVE ---------------- */
@@ -488,4 +515,3 @@ header nav ul li.button a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
