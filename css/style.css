@@ -421,7 +421,7 @@ header nav ul li.button a:hover {
   opacity: 0.8;
   transition: opacity 300ms ease;
   z-index: 1000;
-  display: none; /* Приховано за замовчуванням (зазвичай керується JS) */
+  display: none;
 }
 
 #scroll-to-top:hover {
@@ -515,3 +515,4 @@ header nav ul li.button a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
