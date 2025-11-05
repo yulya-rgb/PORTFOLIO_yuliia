@@ -9,6 +9,7 @@
   --text-color: #ffffff;
 }
 
+/* ---------------- BASE ---------------- */
 * {
   margin: 0;
   padding: 0;
@@ -18,10 +19,8 @@
 body {
   background-color: #161616;
   font-family: 'Poppins', sans-serif;
-  font-weight: 400;
   color: var(--text-color);
   font-size: 16px;
-  height: 100%;
   min-width: 320px;
 }
 
@@ -38,23 +37,19 @@ img {
 
 .wrapper {
   background: linear-gradient(180deg, var(--bg-gradient-top) 0%, var(--bg-gradient-bottom) 100%);
-  width: 100%;
   min-height: 100vh;
   padding-top: 80px;
 }
 
 .container {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-
 /* ---------------- HEADER ---------------- */
-
 header {
-  padding: 20px 0;
+  padding: 15px 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -66,45 +61,42 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 15px;
 }
 
 header .logo {
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 800;
+  white-space: nowrap;
 }
 
 header nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 25px;
   align-items: center;
-  flex-wrap: wrap;
-}
-
-header nav ul li {
-  display: inline-block;
+  flex-wrap: nowrap;
 }
 
 header nav ul li a {
-  padding: 10px 0;
   display: block;
+  padding: 8px 0;
   font-weight: 500;
   transition: all 300ms ease;
-  color: var(--text-color);
 }
 
 header nav ul li:not(.button) a:hover {
-  border-bottom: 5px solid var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
 }
 
 header nav ul li.button a {
   background: var(--primary-color);
   padding: 10px 20px;
   border-radius: 5px;
-  transition: all 500ms ease;
   font-weight: 600;
   color: var(--bg-dark);
+  transition: all 400ms ease;
 }
 
 header nav ul li.button a:hover {
@@ -112,34 +104,24 @@ header nav ul li.button a:hover {
   color: var(--text-color);
 }
 
-
 /* ---------------- HERO ---------------- */
-
 .hero {
   padding-top: 120px;
   padding-bottom: 100px;
-  position: relative;
-  overflow: hidden;
   min-height: 550px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .hero-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
 .hero_info {
-  width: 100%;
   max-width: 530px;
-  padding: 70px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 400px;
 }
 
 .hero_info h1 {
@@ -148,8 +130,6 @@ header nav ul li.button a:hover {
 }
 
 .hero_info p {
-  font-weight: 500;
-  line-height: 170%;
   margin: 30px 0;
   font-size: 22px;
   color: var(--primary-color);
@@ -160,17 +140,13 @@ header nav ul li.button a:hover {
   color: var(--text-color);
   border-radius: 50px;
   padding: 15px 30px;
-  border: 0;
-  transition: all 500ms ease;
   font-size: 18px;
   font-weight: 600;
   display: inline-block;
-  max-width: 250px;
-  text-align: center;
+  transition: all 500ms ease;
 }
 
 .hero_info .button:hover {
-  cursor: pointer;
   background: var(--secondary-color);
   transform: scale(1.05);
 }
@@ -179,17 +155,14 @@ header nav ul li.button a:hover {
   width: 40%;
   height: 450px;
   object-fit: cover;
-  top: 50%;
-  right: 100px;
-  position: absolute;
-  transform: translateY(-50%);
   border-radius: 10px;
-  max-width: 450px;
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  transform: translateY(-50%);
 }
 
-
 /* ---------------- ABOUT ---------------- */
-
 .about {
   padding: 100px 0;
   background: linear-gradient(180deg, var(--bg-gradient-bottom) 0%, var(--bg-gradient-top) 100%);
@@ -198,7 +171,7 @@ header nav ul li.button a:hover {
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
+  gap: 60px;
   align-items: center;
 }
 
@@ -228,31 +201,20 @@ header nav ul li.button a:hover {
   background: var(--secondary-color);
   border-radius: 10px;
   z-index: 1;
-  transition: all 400ms ease;
-}
-
-.about-img:hover::before {
-  top: -30px;
-  left: -30px;
 }
 
 .about-text h2 {
   font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 20px;
   color: var(--primary-color);
+  margin-bottom: 20px;
 }
 
 .about-text p {
-  color: var(--text-color);
   line-height: 1.8;
   margin-bottom: 15px;
-  font-weight: 300;
 }
 
-
 /* ---------------- PROJECTS ---------------- */
-
 .projects {
   padding: 80px 0 100px;
   background: linear-gradient(180deg, var(--bg-gradient-top) 0%, var(--bg-gradient-bottom) 100%);
@@ -288,25 +250,18 @@ header nav ul li.button a:hover {
 
 .project-card img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
 }
 
-.project-card h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
 .view-button {
-  background: none;
-  color: var(--text-color);
   border: 2px solid var(--primary-color);
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 16px;
+  background: none;
+  color: var(--text-color);
   font-weight: 500;
   transition: all 300ms ease;
 }
@@ -316,9 +271,7 @@ header nav ul li.button a:hover {
   color: var(--bg-dark);
 }
 
-
 /* ---------------- CONTACT ---------------- */
-
 .contact {
   padding: 100px 0;
   background: linear-gradient(180deg, var(--bg-gradient-bottom) 0%, var(--bg-gradient-top) 100%);
@@ -332,40 +285,27 @@ header nav ul li.button a:hover {
   gap: 20px;
 }
 
-.form-group {
-  width: 100%;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 500;
-  color: var(--primary-color);
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
+.contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 15px;
+  border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0.05);
   color: var(--text-color);
-  border-radius: 5px;
-  transition: all 300ms ease;
-  font-family: inherit;
   font-size: 16px;
+  transition: all 300ms ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: none;
   border-color: var(--primary-color);
   box-shadow: 0 0 10px rgba(245, 176, 39, 0.5);
+  outline: none;
 }
 
 .send-button {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   margin-top: 50px;
   width: 100%;
   height: 50px;
@@ -378,13 +318,11 @@ header nav ul li.button a:hover {
 }
 
 .send-button:hover {
-  background-color: var(--secondary-color);
+  background: var(--secondary-color);
   color: var(--text-color);
 }
 
-
 /* ---------------- FOOTER ---------------- */
-
 .footer {
   padding: 30px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -395,23 +333,20 @@ header nav ul li.button a:hover {
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
-  font-weight: 300;
 }
 
 .social-links a {
-  font-size: 24px;
   margin-left: 20px;
-  transition: color 300ms ease;
+  font-size: 24px;
   color: rgba(255, 255, 255, 0.7);
+  transition: color 300ms ease;
 }
 
 .social-links a:hover {
   color: var(--primary-color);
 }
 
-
 /* ---------------- SCROLL BUTTON ---------------- */
-
 #scroll-to-top {
   position: fixed;
   bottom: 30px;
@@ -425,135 +360,75 @@ header nav ul li.button a:hover {
   line-height: 45px;
   font-size: 24px;
   font-weight: 700;
-  z-index: 1000;
   transition: all 300ms ease;
 }
 
 #scroll-to-top:hover {
   background: var(--secondary-color);
   color: var(--text-color);
-  box-shadow: 0 0 15px var(--primary-color);
 }
 
-
-/* ---------------- MOBILE FIX ---------------- */
-
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1023px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-img {
+    margin: 0 auto;
+  }
+}
 
 @media (max-width: 767px) {
-
   header {
-    padding: 5px 10px;              
+    padding: 8px 15px;
   }
 
   .header-container {
-    flex-direction: column;        
+    flex-direction: column;
     align-items: center;
-    gap: 2px;
+    gap: 5px;
   }
 
   header .logo {
-    font-size: 1rem;                
-    margin: 0;
-    padding: 0;
+    font-size: 18px;
   }
 
   header nav ul {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 8px;                       
-    padding: 0;
-    margin: 0;
-  }
-
-  header nav ul li {
-    list-style: none;
-  }
-
-  header nav ul li a {
-    font-size: 0.85rem;             
-    padding: 5px 0;
+    gap: 10px;
   }
 
   header nav ul li.button {
-    order: 2;                      
-    margin-top: 6px;
-  }
-
-  header nav ul li.button a {
-    display: inline-block;
-    padding: 8px 20px;              
-    border-radius: 6px;
-    background: var(--primary-color);
-    color: var(--bg-dark);
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: background 300ms ease;
-  }
-
-  header {
-    height: auto;                   
-  }
-}
-
-
-@media (min-width: 768px) {
-
-  .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    align-items: center;
-    gap: 40px;
-    text-align: left;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 60px 20px;
-  }
-
-  .about-content img {
     width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 15px;
-    object-fit: cover;
-    justify-self: center;
+    text-align: center;
+    margin-top: 5px;
   }
 
-  .about-text {
-    max-width: 500px;
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero img {
+    position: static;
+    width: 100%;
+    max-width: 350px;
+    margin-top: 20px;
+    transform: none;
   }
 
   .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    justify-items: center;
-    align-items: stretch;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 20px;
+    grid-template-columns: 1fr;
   }
 
-  .project-card {
-    width: 100%;
-    max-width: 360px;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #111;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .project-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-  }
-
-  .project-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+  .about-content {
+    grid-template-columns: 1fr;
   }
 }
 
